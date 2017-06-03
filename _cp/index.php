@@ -2,7 +2,7 @@
 	include("require/session.inc.php");
 	if(!$_SESSION['username'])
 	{
-		header("location:../login");
+		header("location:../_login/Login.php");
 	}
 	include("require/connection.inc.php")
 ?>
