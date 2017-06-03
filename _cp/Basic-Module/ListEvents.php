@@ -165,7 +165,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                                   </tbody>
                                   <tfoot>
                                     <tr>
-                                      <td align="center" colspan="4"><?php if(mysql_num_rows($res_EventList)==0){ echo "No Event Available Now";}?>
+                                      <td align="center" colspan="4"><?php if(mysql_num_rows($res_EventList)==0){ echo "No news added yet ! <a href='UploadEventHeading.php'> Click Here</a> to Add";}?>
                                       </td>
                                     </tr>
                                   </tfoot>

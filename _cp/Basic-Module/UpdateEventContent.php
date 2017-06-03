@@ -241,9 +241,13 @@
     $(function() {
               // Bootstrap
               $( 'textarea#MTXT_EventData' ).ckeditor({width:'100%', height: '150px', toolbar: [
-  				{ name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
-  				[ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],			// Defines toolbar group without name.
-  				{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
+      				  { name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript' ] },
+                { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Blockquote',
+                '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'] },
+                { name: 'links', items : [ 'Link','Unlink' ] },
+                { name: 'styles', items : [ 'FontSize' ] },
+                { name: 'colors', items : [ 'TextColor','BGColor' ] },
+                { name: 'tools', items : [ 'Maximize'] }
          ]});
               /*$( 'textarea#MTXT_EventData' ).ckeditor({width:'99.6%', height: '350px'});*/
             });

@@ -175,7 +175,7 @@ dp_cal = new Epoch('epoch_popup','popup',document.getElementById('TXT_EventDt'))
                           <input type="submit" name="BTN_Upl_Event" id="BTN_Upl_Event" value="Save & Return" class="btn btn-block btn-primary" />
                         </div>
                         <div class="col-md-3">
-                          <input type="reset" name="BTN_Cancel" id="BTN_Cancel" value="Cancel" class="btn btn-block btn-warning" />
+                          <input type="button" onclick="document.location.href='ListEvents.php'" name="BTN_Cancel" id="BTN_Cancel" value="Cancel" class="btn btn-block btn-warning" />
                         </div>
                       </div>          
                     </form>
@@ -218,9 +218,14 @@ dp_cal = new Epoch('epoch_popup','popup',document.getElementById('TXT_EventDt'))
         $(function() {
           // Bootstrap
             $( 'textarea#MTXT_EventData' ).ckeditor({width:'100%', height: '150px', toolbar: [
-				    { name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
-    				[ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],			// Defines toolbar group without name.
-    				{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
+				    /*{ name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },*/	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
+            { name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript' ] },
+            { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Blockquote',
+            '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'] },
+            { name: 'links', items : [ 'Link','Unlink' ] },
+            { name: 'styles', items : [ 'FontSize' ] },
+            { name: 'colors', items : [ 'TextColor','BGColor' ] },
+            { name: 'tools', items : [ 'Maximize'] }
     			]});
            /*$( 'textarea#MTXT_EventData' ).ckeditor({width:'99.6%', height: '350px'});*/
         });

@@ -5,7 +5,6 @@ include("../require/connection.inc.php");
 include("../require/functions.inc.php");
 include("../require/timezone.inc.php");
 include("../require/common.inc.php");
-include("../require/validate-user.inc.php");
 
 $m_id=(isset($_GET['mailID'])) ? $_GET['mailID']: '';//get the complain ID and store
 
@@ -311,10 +310,13 @@ if(isset($_POST['BTN_Reply_Suggestion']))
 	$(function() {
             // Bootstrap
             $( 'textarea#MTXT_Reply' ).ckeditor({width:'98%', height: '150px', toolbar: [
-				{ name: 'document', items: [ 'Source', '-', /*'NewPage',*/ 'Preview', '-'/*, 'Templates' */] },	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
-				['NumberedList', 'BulletedList'],
-				[ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-'/*, 'Undo', 'Redo'*/ ],			// Defines toolbar group without name.
-				{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
+				{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript' ] },
+	            { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Blockquote',
+	            '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'] },
+	            { name: 'links', items : [ 'Link','Unlink' ] },
+	            { name: 'styles', items : [ 'FontSize' ] },
+	            { name: 'colors', items : [ 'TextColor','BGColor' ] },
+	            { name: 'tools', items : [ 'Maximize'] }
 				]});
            // $( 'textarea#ckeditor_full' ).ckeditor({width:'99.6%', height: '350px'});
        });

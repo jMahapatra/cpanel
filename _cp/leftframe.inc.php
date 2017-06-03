@@ -20,17 +20,19 @@
     
     <li class="panel"><a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#gallery-nav"><i class="fa fa-picture-o"></i> Gallery<span class="pull-right"><i class="fa fa-angle-left"></i></span></a>
         <ul class="collapse" id="gallery-nav">
-            <li class=""><a href="Basic-Module/Alb_CreateNewAlbum.php">Create Album</a></li>
-            <li class=""><a href="Basic-Module/Alb_UploadImg.php">Upload Image</a></li>
+            <li class=""><a href="Basic-Module/Alb_UploadImg.php">Photo Gallery</a></li>
         </ul>
     </li>
-    <li class="panel "><a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed"
+   
+    <!--<li class="panel "><a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed"
     data-target="#news-nav"><i class="fa fa-newspaper-o"></i> News Updates<span class="pull-right"><i class="fa fa-angle-left"></i></span></a>
         <ul class="collapse" id="news-nav">
             <li class=""><a href="Basic-Module/UploadEventHeading.php">Create New News</a></li>
             <li class=""><a href="Basic-Module/ListEvents.php">View All News</a></li>
         </ul>
-    </li>
+    </li>-->
+    <li class="panel "><a href="Basic-Module/ListEvents.php"><i class="fa fa-newspaper-o"></i> News Updates<span class="pull-right"><i class="fa fa-angle-left"></i></span></a></li>
+
    <li class="panel "><a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed"
     data-target="#upd-nav"><i class="fa fa-pencil"></i> Notice<span class="pull-right"><i class="fa fa-angle-left"></i></span></a>
         <ul class="collapse" id="upd-nav">
