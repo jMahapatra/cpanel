@@ -24,14 +24,14 @@
         </ul>
     </li>
     
-   <!--<li class="panel "><a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed"
+   <li class="panel "><a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed"
     data-target="#form-nav"><i class="fa fa-newspaper-o"></i> News Updates<span class="pull-right"><i class="fa fa-angle-left"></i></span></a>
         <ul class="collapse" id="form-nav">
-            <li class=""><a href="../Basic-Module/UploadEventHeading.php">Create New News</a></li>
-            <li class=""><a href="../Basic-Module/ListEvents.php">View All News</a></li>
+            <li class=""><a href="../Basic-Module/UploadEventHeading.php">Add News</a></li>
+            <li class=""><a href="../Basic-Module/ListEvents.php">All News</a></li>
         </ul>
-    </li>-->
-   <li class="panel "><a href="../Basic-Module/ListEvents.php"><i class="fa fa-newspaper-o"></i> News Updates<span class="pull-right"><i class="fa fa-angle-left"></i></span></a></li>
+    </li>
+   <!--<li class="panel "><a href="../Basic-Module/ListEvents.php"><i class="fa fa-newspaper-o"></i> News Updates<span class="pull-right"><i class="fa fa-angle-left"></i></span></a></li>-->
     
    <li class="panel "><a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed"
     data-target="#upd-nav"><i class="fa fa-pencil"></i> Notice<span class="pull-right"><i class="fa fa-angle-left"></i></span></a>
