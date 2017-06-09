@@ -311,12 +311,13 @@ if(isset($_POST['BTN_Reply_Suggestion']))
             // Bootstrap
             $( 'textarea#MTXT_Reply' ).ckeditor({width:'98%', height: '150px', toolbar: [
 				{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript' ] },
-	            { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Blockquote',
-	            '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'] },
-	            { name: 'links', items : [ 'Link','Unlink' ] },
-	            { name: 'styles', items : [ 'FontSize' ] },
-	            { name: 'colors', items : [ 'TextColor','BGColor' ] },
-	            { name: 'tools', items : [ 'Maximize'] }
+				{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Blockquote',
+				'-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'] },
+				{ name: 'links', items : [ 'Link','Unlink' ] },
+				{ name: 'styles', items : [ 'Format','FontSize' ] },
+				{ name: 'colors', items : [ 'TextColor','BGColor' ] },
+				{ name: 'insert', items : [ 'Image','Table'] },
+				{ name: 'tools', items : [ 'Maximize'] }
 				]});
            // $( 'textarea#ckeditor_full' ).ckeditor({width:'99.6%', height: '350px'});
        });

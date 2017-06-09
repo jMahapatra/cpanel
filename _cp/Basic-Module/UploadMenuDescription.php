@@ -340,12 +340,13 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         $(function() {
             // Bootstrap
             $( 'textarea#MTXT_EventData' ).ckeditor({width:'100%', height: '200px', toolbar: [
-				    { name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript' ] },
+			{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript' ] },
             { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Blockquote',
             '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'] },
             { name: 'links', items : [ 'Link','Unlink' ] },
-            { name: 'styles', items : [ 'FontSize' ] },
+            { name: 'styles', items : [ 'Format','FontSize' ] },
             { name: 'colors', items : [ 'TextColor','BGColor' ] },
+			{ name: 'insert', items : [ 'Image','Table'] },
             { name: 'tools', items : [ 'Maximize'] }
 			]});
            /*$( 'textarea#MTXT_EventData' ).ckeditor({width:'99.6%', height: '350px'});*/

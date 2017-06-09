@@ -47,7 +47,7 @@ include("../require/common.inc.php");
 		}
 		
 		
-		mysql_query("INSERT INTO `latest_news` (`LE_NewsCatg`, `LE_Heading`, `LE_Date`, `LE_UpdatedDate`,`LE_UpdatedBy`, `LE_File`,`LE_Photo`) VALUES ('".$_POST['SE_NewsCatg']."', '$heading','$news_dt', 'Never Updated', 'Never Updated', '".$News_nm."', '".$News_photo."')") or die(mysql_error());
+		mysql_query("INSERT INTO `latest_news` (`LE_NewsCatg`, `LE_Heading`, `LE_Date`, `LE_UpdatedDate`,`LE_UpdatedBy`, `LE_File`,`LE_Photo`) VALUES ('".$_POST['SE_NewsCatg']."', '$heading','$news_dt', '".date('Y-m-d')."', 'Never Updated', '".$News_nm."', '".$News_photo."')") or die(mysql_error());
 		$event_id=mysql_insert_id();
 		if(!empty($content))
 		{
@@ -218,13 +218,13 @@ dp_cal = new Epoch('epoch_popup','popup',document.getElementById('TXT_EventDt'))
         $(function() {
           // Bootstrap
             $( 'textarea#MTXT_EventData' ).ckeditor({width:'100%', height: '150px', toolbar: [
-				    /*{ name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },*/	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
-            { name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript' ] },
+			{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript' ] },
             { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Blockquote',
             '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'] },
             { name: 'links', items : [ 'Link','Unlink' ] },
-            { name: 'styles', items : [ 'FontSize' ] },
+            { name: 'styles', items : [ 'Format','FontSize' ] },
             { name: 'colors', items : [ 'TextColor','BGColor' ] },
+			{ name: 'insert', items : [ 'Image','Table'] },
             { name: 'tools', items : [ 'Maximize'] }
     			]});
            /*$( 'textarea#MTXT_EventData' ).ckeditor({width:'99.6%', height: '350px'});*/

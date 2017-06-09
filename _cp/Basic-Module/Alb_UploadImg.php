@@ -109,25 +109,14 @@ $dir = "../../Upl_Images/Gallery/";
                 </header>
                 <div class="body">
                   <table width="100%">
-                    <?php
-                    if(mysql_num_rows($res_alb)==0)
-                    {
-                     ?>
-					 <tr>
-					 <td>
-                     <table width="33.3%" align="left" cellpadding="10" class="table-bordered" style="margin: 0.5%">
+                   <tr>
+                    <td>
+					<table width="30%" align="left" cellpadding="10" class="table-bordered" style="margin: 0.5%">
 						<tr>
                          <td align="center">
                            <a href="<?php echo "Alb_CreateNewAlbum.php"?>"><img src="..	/assets/img/add-button.png" width="300px" class="img img-responsive" alt="New Album" /></a></td>
                         </tr>
 					  </table>
-					  </td>
-					  </tr>
-                     <?php
-                   }?>
-                   <tr>
-                    <td>
-					
                      <?php
                      while($row_alb = mysql_fetch_array($res_alb))
                      {

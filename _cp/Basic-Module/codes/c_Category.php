@@ -34,7 +34,7 @@ include("../../require/connection.inc.php");
 						
 						$row_count = mysql_fetch_assoc(mysql_query("SELECT COUNT(`Category_ID`) as `TotalSub` FROM `menu_master` WHERE `Parent_ID`='".$row_category['Category_ID']."'"));
 					?>
-                        <div class="col-lg-5" style="font-size:13px;font-weight:600">
+                        <div class="col-lg-6" style="font-size:13px;font-weight:600">
                          <i class="fa <?php echo $menu;?>"></i>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="fillCategory(<?php echo $row_category['Category_ID']?>,'<?php echo $row_category['CategoryName']?>')"><?php echo ucwords($row_category['CategoryName'])?></a>&nbsp;&nbsp; 
                         </div>
 						
@@ -80,6 +80,8 @@ include("../../require/connection.inc.php");
 		}
 		
 		mysql_query("INSERT INTO `menu_master`(`Parent_ID`, `CategoryName`, `position`, `InMenu`, `IsDeleted`, `IsActive`)VALUES('$parentId','$categoryName', '$newPosition', '$addedMenu','$deleted','$active')")or die(mysql_error());
+
+		mysql_query("INSERT INTO `menu_contents`(`MenuName`, `LE_UpdatedDate`,`LE_UpdatedBy`) VALUES ('$categoryName', '".date('Y-m-d')."', '".$_SESSION['username']."')") or die(mysql_error());
 	}
 ?>
 <?php 
