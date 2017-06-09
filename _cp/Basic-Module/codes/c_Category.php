@@ -89,6 +89,16 @@ include("../../require/connection.inc.php");
 	{
  		$categoryId = $_POST['categoryId'];
 		$deleteStatus = $_POST['status'];
+
+		$menuId = mysql_query("SELECT `CategoryName` FROM `menu_master` WHERE `Category_ID`='$categoryId' OR `Parent_ID`='$categoryId'");
+		while($menuIdRows = mysql_fetch_assoc($menuId)){
+			
+			$queryMenu = mysql_fetch_Assoc(mysql_query("SELECT `LE_Slno` FROM `menu_contents` WHERE `MenuName`='".$menuIdRows['CategoryName']."'"));
+			mysql_query("DELETE FROM `menu_contents_detail` WHERE `LE_C_EventId`='".$queryMenu['LE_Slno']."'");
+			mysql_query("DELETE FROM `menu_contents` WHERE `MenuName`='".$menuIdRows['CategoryName']."'");
+
+		}
+		
 		
 		mysql_query("DELETE FROM `menu_master` WHERE `Category_ID` = '$categoryId'")or die(mysql_error());// Remove Menu
 		mysql_query("DELETE FROM `menu_master` WHERE `Parent_ID` = '$categoryId'"); //Remove Sub Menu(s)
