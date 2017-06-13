@@ -10,13 +10,16 @@ include("../require/common.inc.php");
 $res_totEventList = mysql_query("select * from `latest_news` order by LE_Slno DESC");
 if(isset($_GET['del_eventsid']))
 {
+	$newsMainImg = mysql_fetch_assoc(mysql_query("SELECT `LE_Photo` FROM `latest_news` WHERE `LE_Slno` = '".$_GET['del_eventsid']."'"));
 	$res_eventImg = mysql_query("SELECT * FROM `latest_news_content` WHERE `LE_C_EventId` = '".$_GET['del_eventsid']."'");
 	while($row_eventImg = mysql_fetch_array($res_eventImg))
 	{
 		if($row_eventImg['LE_C_Type'] == "Image")
-		unlink("../../Upl_Images/EventImage/".$row_eventImg['LE_C_Content']);
+		unlink("../../Upl_Images/NewsImage/".$row_eventImg['LE_C_Content']);
 	}
-	
+	if($newsMainImg['LE_Photo']!=''){
+		unlink("../../Upl_Images/NewsImage/".$newsMainImg['LE_Photo']);
+	}
 	mysql_query("DELETE FROM `latest_news_content` WHERE `LE_C_EventId` = '".$_GET['del_eventsid']."'");
 	mysql_query("OPTIMIZE TABLE `latest_news_content`");
 	mysql_query("DELETE FROM latest_news WHERE LE_Slno = '".$_GET['del_eventsid']."'") or die(mysql_error());
