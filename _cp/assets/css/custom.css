@@ -1,0 +1,396 @@
+/* CSS Document */
+
+/*.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12
+{
+	margin-left: 0;
+	padding-left: 0;
+}*/
+.form-group
+{
+	padding: 0px;
+}
+.form-group label.control-label 
+{
+	font-size: 12px;
+	text-align: left;
+	padding-top: 0px;
+}
+.form-group
+{
+	margin-bottom: 3px;
+}
+.form-group input, .form-group select, .form-group textarea
+{
+	border-color: #DADADA;
+	paddding: 0px;
+	height: auto;
+}
+.form-group input[type="text"]
+{
+	font-weight: bold;
+	color: #454545;
+	padding: 3px;
+	height: auto;
+}
+.form-group select
+{
+	font-weight: bold;
+	color: #454545;
+	padding: 3px;
+	height: auto;
+}
+.form-group textarea
+{
+	font-weight: bold;
+	color: #454545;
+	padding: 3px;
+	/*height: 40px;
+	min-height: 40px;
+	max-height: 40px;*/
+}
+
+.menuCont
+{
+	background-color: #F3F3F3;
+	margin: 3%;
+	color: #9C9C9C;
+	margin-top: 5%;
+	text-align: center;
+	border: solid 1px #D8D8D8;
+	padding-top: 3%;
+}
+.menuCont h3
+{
+	font-size:20px;
+	color: #9C9C9C;
+}
+.menuCont a.link
+{
+	color: #464646;
+	display: block;
+	padding: 0px 3%;
+	padding-top: 3%;
+	padding-bottom: 11%;
+	border-top: solid 1px #D9D9D9;
+	background-color: #F6F6F6;
+	width: 96%;
+	margin-left: 2%;
+	
+}
+.act h3
+{
+	color: #374A59;
+}
+
+.act a.link:hover
+{
+	background-color: #FFF;
+	color: #EB6A5A;
+}
+.act:hover
+{
+	color: #EB6A5A;
+}
+div.act a
+{
+	color: #374A59;
+}
+div.act h3
+{
+	color: #374A59;
+}
+div.act
+{
+	color: #374A59;
+	background-color: #FFF;
+	border: solid 1px #C2C2C2;
+	
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.6s;
+	-webkit-transition-delay: 0s;
+	
+	-moz-transition-property: all;
+	-moz-transition-duration: 0.6s;
+	-moz-transition-delay: 0s;
+	
+	-o-transition-property: all;
+	-o-transition-duration: 0.6s;
+	-o-transition-delay: 0s;
+	
+	-ms-transition-property: all;
+	-ms-transition-duration: 0.6s;
+	-ms-transition-delay: 0s;
+	
+	transition-property: all;
+	transition-duration: 0.6s;
+	transition-delay: 0s;
+
+}
+div.act:hover
+{
+	border: solid 1px #EB6A5A;
+	box-shadow: 0px 0px 5px #EB6A5A;
+}
+
+
+.suggest
+{
+	background-color: #FFF;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	border: solid 1px #EEEEEE;
+	border-bottom: none;
+}
+.suggest li
+{
+	cursor: pointer;
+	list-style-type: none;
+	padding: 3px 5px;
+	border-bottom: solid 1px #EEEEEE;
+}
+.suggest li:hover, .suggest li.selected
+{
+	background-color: #EEEEEE;
+}
+
+#suggestion
+{
+	position: absolute; 
+	z-index: 1000000; 
+	width: 225px; 
+	top: 60px; 
+	right: 0px; 
+	max-height: 450px; 
+	display: none;
+}
+.calendarTable
+{
+	color: #686868;
+	border-collapse: collapse;
+	padding: 0px;
+	margin: 10px auto;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.calendarTable tbody tr
+{
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-delay: 0s;
+	
+	-moz-transition-property: all;
+	-moz-transition-duration: 0.3s;
+	-moz-transition-delay: 0s;
+	
+	-o-transition-property: all;
+	-o-transition-duration: 0.3s;
+	-o-transition-delay: 0s;
+	
+	-ms-transition-property: all;
+	-ms-transition-duration: 0.3s;
+	-ms-transition-delay: 0s;
+	
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+}
+
+.calendarTable tbody tr:hover
+{
+	background-color: #F1F1F1;
+}
+.calendarTable td, .calendarTable th
+{
+	padding: 3px;
+	margin: 0px;
+	font-size: 12px;
+		
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-delay: 0s;
+	
+	-moz-transition-property: all;
+	-moz-transition-duration: 0.3s;
+	-moz-transition-delay: 0s;
+	
+	-o-transition-property: all;
+	-o-transition-duration: 0.3s;
+	-o-transition-delay: 0s;
+	
+	-ms-transition-property: all;
+	-ms-transition-duration: 0.3s;
+	-ms-transition-delay: 0s;
+	
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+
+}
+.calendarTable a
+{
+	display: block;
+	padding: 1px 0px;
+}
+.linkCont
+{
+	
+}
+.linkCont:hover
+{
+	background-color: #9A9A9A;
+}
+.actCont
+{
+	background-color: #578BA4;
+}
+.actCont a
+{
+	text-align: center;
+	color: #F9F9F9;
+}
+.actCont:hover
+{
+	background-color: #2B546C;
+}
+.modal-dialog
+{
+	/*width:65%;*/width: auto;	
+}
+.modal-md
+{
+	max-width: 100%;
+   	/*width: auto !important;
+    display: inline-block;*/
+    width:50%;
+}
+/*.modal.in{
+     text-align: center;
+}*/
+
+
+
+
+
+.switch {
+width: 37px;
+height: 17px;
+background: #e5e5e5;
+z-index: 0;
+margin: 0;
+padding: 0;
+appearance: none;
+border: none;
+cursor: pointer;
+position: relative;
+border-radius:16px;
+-moz-border-radius:16px;
+-webkit-border-radius:16px;
+}
+
+.switch:before {
+content: ' ';
+position: absolute;
+left: 1px;
+top: 1px;
+width: 35px;
+height: 15px;
+background: #fff;
+z-index: 1;
+border-radius:16px;
+-moz-border-radius:16px;
+-webkit-border-radius:16px;
+}
+
+.switch:after {
+content: ' ';
+height: 14px;
+width: 14px;
+border-radius: 28px;
+background: #fff;
+position: absolute;
+z-index: 2;
+top: 1px;
+left: 1px;
+-webkit-transition-duration: 300ms;
+transition-duration: 300ms;
+-webkit-box-shadow: 0 2px 5px #999999;
+box-shadow: 0 2px 5px #999999;
+}
+.switchOn,.switchOn:before
+{
+background: #4cd964 !important;
+}
+
+.switchOn:after
+{
+left: 22px !important;
+}
+
+
+.icons .sm
+{
+	margin-top: 15px;
+	border-radius: 15px; 
+}
+#menu ul a {
+	color: #ccc;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);*/
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+  font-size:12px;
+  margin-bottom:-5px;
+}
+#menu ul a:hover{
+	text-decoration: none;
+	background-color: #404040;
+	color: #FFF;
+	outline: medium none;
+}
+.navbar{
+	min-height:10px;
+}
+	
